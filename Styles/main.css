@@ -1,0 +1,279 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@font-face{
+    font-family: AppleFont;
+    src: url(/Library/Fonts/SF-Pro-Display-Bold.otf);
+    font-weight: bold;
+}
+@font-face{
+    font-family: AppleFont;
+    src: url(/Library/Fonts/SF-Pro-Display-Ultralight.otf);
+    font-weight: lighter;
+}
+@font-face{
+    font-family: AppleFont;
+    src: url(/Library/Fonts/SF-Pro-Display-Medium.otf);
+    font-weight: medium;
+}
+@font-face{
+    font-family: AppleFont;
+    src: url(/Library/Fonts/SF-Pro-Display-Regular.otf);
+    font-weight: normal;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.albumInfo{
+    margin: 16px 0px;
+    font-family: AppleFont;
+    font-weight: bold;
+    color: white;
+}
+
+.artistTitle{
+    color: white;
+    font-size: 72px;
+    font-family: AppleFont;
+    font-weight: lighter;
+    position: relative;
+    margin: 570px 50px 50px 735px;
+}
+
+.biographyText{
+    font-family: SF Pro Display;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+    color: #FFFFFF;
+    width: 625px;
+    height: 459px;
+    overflow: scroll;
+    margin: auto;
+}
+
+.bioTitle{
+    color: white;
+    font-size: 72px;
+    font-family: AppleFont;
+    font-weight: lighter;
+    position: relative;
+    text-align: center;
+}
+
+body{
+    /* background-image: url(Images/NateAndNico.jpg); */
+    background: linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)), url(../Images/NateAndNico.jpg);
+}
+
+@keyframes blink{
+    0% { background-color: #ccc;}
+    49% { background-color: #ccc;}
+    50% { background-color: transparent;}
+    99% { background-color: transparent;}
+    100% { background-color: #ccc;}
+}
+
+.creditsTitle{
+    color: white;
+    font-size: 72px;
+    font-family: AppleFont;
+    font-weight: lighter;
+    text-align: center;
+    opacity: 1;
+}
+
+.creditsBlock{
+    width: 668px;
+    height: 692px;
+    background: #000000;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 43px;
+    background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url(../Images/NateAndNico.jpg);
+    float: right;
+    margin-right: 16px;
+    padding: 15px;
+    overflow: scroll;
+}
+
+.contactBtn{
+    width: 223px;
+    height: 58px;
+    background: #FFFFFF;
+    border-radius: 75px;
+    margin: 58px 530px 0px 530px;
+    font-family: SF Pro Display;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+    /* identical to box height */
+    color: #000000;
+    padding: 10px 38px;
+}
+
+.cursor{
+    display: inline-block;
+    width: 3px;
+    background-color: #ffffff;
+    margin-left: 0.1rem;
+    animation: blink 1s infinite ;
+}
+
+.cursor.typing{
+    animation: none;
+}
+
+.dummyMenuBox{
+    position: absolute;
+    width: 573px;
+    height: 50px;
+    left: 641px;
+    top: 24px;
+    padding: 20px;
+}
+
+.grid{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.gridItem{
+    margin: 15px auto;
+}
+
+.gridItem h2{
+    font-size: 24px;
+}
+.gridItem p{
+    font-size: 14px;
+}
+
+img{
+    width: 191px;
+    height: 191px;
+    box-shadow: 0px 20px 15px rgba(247, 85, 82, 0.15);
+    border-radius: 15px;
+}
+
+h1{
+    font-size: 81px;
+}
+
+h2{
+    font-size: 32px;
+}
+
+
+.homeTitle{
+    color: white;
+    font-family: AppleFont;
+    position: absolute;
+    width: 468px;
+    height: 138px;
+    left: 875px;
+    top: 381px;
+}
+
+.menu{
+    color: white;
+    position: absolute;
+    width: 573px;
+    height: 50px;
+    left: 641px;
+    top: 24px;
+    list-style: none;
+    transition: all 0.5s ease;
+    display: none;
+    padding: 20px;
+    /* padding: 20px 0px 20px 20px; */
+    /* background-color: aqua; */
+}
+
+.menu li{
+    display: inline-block;
+    font-family: AppleFont;
+    font-weight: medium;
+    font-size: 24px;
+    margin-right: 24px;
+    transition: all 0.5s ease;
+}
+
+.menu li:hover{
+    cursor: pointer;
+    opacity: 50%;
+}
+
+.menuIcon{
+    position: relative;
+    margin: 35px 25px 0px 1252px;
+    /* background-color: blueviolet; */
+    width: 100px;
+}
+
+.menuIconLongBar{
+    position: relative;
+    width: 50px;
+    height: 4px;
+    background: #FFFFFF;
+    margin-bottom: 12px;
+    transition: all 1.5s ease;
+}
+.menuIconMiddleBar{
+    position: relative;
+    width: 45px;
+    height: 4px;
+    background: #FFFFFF;
+    margin-bottom: 12px;
+    transition: all 1s ease;
+}
+.menuIconShortBar{
+    position: relative;
+    width: 30px;
+    height: 4px;
+    background: #FFFFFF;
+    margin-bottom: 12px;
+    transition: all 1s ease;
+}
+
+.menuIcon:hover > .menuIconLongBar{
+    opacity: 0;
+    transform: rotate(90deg) translateX(-1500px);
+}
+.menuIcon:hover > .menuIconMiddleBar{
+    opacity: 0;
+    transform: translateX(-2150px) translateY(250px) rotate(90deg);
+}
+.menuIcon:hover > .menuIconShortBar{
+    opacity: 0;
+    transform: translateX(-1520px) translateY(500px) rotate(90deg);
+}
+.menuIcon:hover + .menu{
+    display: block;
+}
+
+.menu:hover{
+    display: block;
+}
+
+
+.dummyMenuBox:hover ~ .menuIcon .menuIconLongBar{
+    opacity: 0;
+    background-color: red;
+    transform: rotate(90deg) translateX(-1500px);
+}
+.dummyMenuBox:hover ~ .menuIconMiddleBar{
+    opacity: 0;
+    transform: translateX(-2150px) translateY(250px) rotate(90deg);
+}
+.dummyMenuBox:hover ~ .menuIconShortBar{
+    opacity: 0;
+    transform: translateX(-1520px) translateY(500px) rotate(90deg);
+}
